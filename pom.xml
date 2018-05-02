@@ -37,6 +37,7 @@
 		</dependency>
 	</dependencies>
 
+	<!-- Build Settings -->
 	<build>
 		<plugins>
 			<plugin>
@@ -65,6 +66,21 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<!-- Environment Settings -->
+	<distributionManagement>
+		<repository>
+			<id>deploymentRepo</id>
+			<name>Internal Releases</name>
+			<url>http://<nexus-ip>:8081/repository/maven-releases/</url>
+		</repository>
+ 
+		<snapshotRepository>
+			<id>deploymentRepo</id>
+			<name>Internal Releases</name>
+			<url>http://<nexus-ip>:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 
 </project>
